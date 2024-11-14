@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipe App</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <h1>Recipe Finder</h1>
+        <div class="input-container">
+            <input type="text" id="search-input" class="search-input" placeholder="Search by ingredients or recipe name...">
+            <button type="submit" class="search-button" id="search-button">
+                <i class="fa fa-search" aria-hidden="true"></i>
+            </button>
+            <a class="favorite-button" href="favorites.html" title="Favorites">
+                <i class="fas fa-star"></i>
+            </a>
+            <div id="autocomplete-results" class="autocomplete-results"></div>
+        </div>
+
+        <div id="recipe-grid" class="recipe-grid"></div>
+    </div>
+
+    <div id="recipe-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="recipe-details"></div>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>
+</html>

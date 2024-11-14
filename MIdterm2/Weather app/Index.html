@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="Styles/style.css">
+</head>
+<body>
+    <header>
+        <h1>Weather App</h1>
+        <div class="unit-toggle">
+          <button id="celsius" class="active">°C</button>
+          <button id="fahrenheit">°F</button>
+        </div>
+      </header>
+      <div class="search-bar">
+        <input type="text" id="cityInput" placeholder="Введите город">
+        <div id="autocomplete-results" class="autocomplete-results"></div>
+        <button id="search-button"> <img src="Images/Search_Magnifying_Glass.svg" alt="">
+          Search</button>
+        <button id="location-button">My Location</button>
+      </div>
+      <section id="current-weather" class="weather-display">
+        <h2 id="cityName">--</h2>
+        <p id="date">--</p>
+        <div class="weather-info">
+          <img id="weatherIcon" src="" alt="">
+          <p id="temperature">--°</p>
+        </div>
+        <p id="weatherDescription">--</p>
+        <div class="extra-info">
+          <p>Humidity: <span id="humidity">--%</span></p>
+          <p>Wind speed: <span id="windSpeed">-- м/с</span></p>
+        </div>
+      </section>
+    
+      <section id="forecast" class="forecast-display">
+        <h3>Forecast for 5 days</h3>
+        <div id="forecastContainer" class="forecast-container">
+        </div>
+      </section>
+    <script src="js/main.js"></script>
+</body>
+</html>

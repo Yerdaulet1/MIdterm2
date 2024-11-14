@@ -1,0 +1,256 @@
+@import url('./reset.css');
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 20px;
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+h1, h2 {
+    color: #333;
+    text-align: center;
+}
+
+.input-container {
+    display: flex;
+}
+
+.search-input {
+    width: 40vw;
+    padding: 20px;
+    border-radius: 15px;
+    margin-right: 10px;
+    border: 1px solid #04ad15;
+}
+
+.search-button {
+    padding: 13px;
+    border-radius: 15px;
+    background-color: #04ad15;
+    border: 1px solid #04ad15;
+    color: #fff;
+    cursor: pointer;
+    margin-right: 10px;
+} 
+
+.favorite-button {
+    padding: 11px;
+    border-radius: 15px;
+    background-color: #04ad15;
+    border: 1px solid #04ad15;
+    color: #fff;
+    cursor: pointer;
+}
+
+.autocomplete-results {
+    position: absolute;
+    top: 21%;
+    right: 33.7%;
+    background-color: white;
+    width: 40%;
+    max-height: 150px;
+    overflow-y: auto;
+    z-index: 10;
+    border-radius: 10px;
+}
+
+.autocomplete-results:empty {
+    display: none;
+}
+
+.autocomplete-results div {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.autocomplete-results div:hover {
+    background-color: #f0f0f0;
+}
+
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.recipe-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.recipe-card:hover {
+    transform: scale(1.05);
+}
+
+.recipe-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.recipe-card h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.view-button {
+    background-color: #04ad15;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 10px;
+}
+
+.view-button:hover {
+    background-color: #04ad15;
+}
+
+.favorite-button {
+    background-color: #04ad15;
+    color: #fff;
+    border-radius: 15px;
+    padding: 10px 14px;
+    font-size: 14px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.favorite-button:hover {
+    background-color: #04ad15;
+}
+
+.favorite-button i {
+    font-size: 16px;
+    color: #fff;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    max-height: 80vh;
+    overflow-y: auto;
+    border-radius: 10px;
+    position: relative;
+    font-family: Arial, sans-serif;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content h2 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.modal-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.modal-content h3 {
+    font-size: 1.3em;
+    color: #444;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.modal-content ol {
+    list-style-type: decimal;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.modal-content ol li {
+    font-size: 1em;
+    line-height: 2.2;
+    color: #555;
+}
+
+.modal-content div {
+    font-size: 1em;
+    color: #555;
+}
+
+.modal-content .recipe-summary {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.favorite-button {
+    background-color: #04ad15;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    padding: 9px
+}
+
+.favorite-button i {
+    color: #fff;
+}
+
+.favorite-button.favorite i {
+    color: red;
+}
+
+.favorite-button:hover {
+    background-color: #04ad15;
+}
